@@ -2,6 +2,7 @@ import ReactPlayer from 'react-player/youtube';
 
 import Header from "./components/Header";
 import MyFirstComponent from "./components/MyFirstComponent";
+import Main from "./components/Main";
 import Footer from "./components/Footer";
 import User from "./components/User";
 
@@ -24,11 +25,11 @@ function App() {
       <User userName="Bob" favDrink="coffee" age={40} />
       <User userName="Charlie" favDrink="tea" age={50} />
 
-      <Header />
+      <hr />
 
-      <MyFirstComponent />
-      
-      <Footer />
+      <Main />
+
+      <hr />
       
       <ReactPlayer url="https://www.youtube.com/watch?v=EvtMTV9mMSc" playing={false} volume={0.1} />
 
