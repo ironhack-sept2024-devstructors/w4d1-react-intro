@@ -1,8 +1,7 @@
-function Header(){
+function Header(props){
     return (
         <>
-            <h1>React Intro</h1>
-            <h2>An intro to React and JSX</h2>
+            <h1>{props.title}</h1>
         </>
     )
 }
