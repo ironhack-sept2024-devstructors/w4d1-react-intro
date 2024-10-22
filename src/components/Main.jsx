@@ -1,5 +1,5 @@
 
-function Main(){
+function Main() {
 
     const moviesArr = [
         {
@@ -27,15 +27,33 @@ function Main(){
             "genres": ["Action", "Adventure", "Drama"],
             "rating": 6
         }
-      ]
+    ]
+
+   
+
+    let title = "";
+
+    if (moviesArr.length === 0) {
+        title = <p>Sorry, no movies to display</p>;
+    }
 
     return (
         <div>
-            {moviesArr.map(function(movieDetails){
+
+            { title }
+
+            {moviesArr.map(function (movieDetails) {
                 return (
-                    <div key={movieDetails.id}>
+                    <div key={movieDetails.id} className="card">
+                        
+                        { movieDetails.imgURL 
+                            ? <img src={movieDetails.imgURL} alt={movieDetails.title} /> 
+                            : <img src="https://dummyimage.com/182x268/ffffff/000000" alt="Placeholder image" />
+                        }
+
                         <p>{movieDetails.title}</p>
                         <p>Rating: {movieDetails.rating}</p>
+                        {movieDetails.rating >=7 && <p>RECOMMENDED!</p>}
                     </div>
                 )
             })}
